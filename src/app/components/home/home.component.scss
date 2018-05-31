@@ -1,17 +1,60 @@
+@import '../../../variable';
+
 .container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: url(../../../assets/background.jpg) no-repeat center fixed;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: cover; /* version standardisée */
-
-  .title {
-    color: white;
-    margin:0;
-    padding:50px 20px;
-  }
-
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 15rem repeat(10, 1fr);
+  grid-template-rows: 50px auto;
 }
+
+header {
+  grid-column: span 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $headerBgColor;
+  div {
+    color: $headerFontColor;
+    width: 5rem;
+    text-align: center;
+  }
+}
+
+.flexPadLeft {
+  margin-left: auto;
+}
+
+aside {
+  grid-column: span 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 1 auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+  div {
+    padding-left: 1rem;
+    border-top: 1px solid gray;
+    width: 100%;
+    line-height: 3rem;
+  }
+}
+
+main {
+  grid-column: span 10;
+}
+
+footer {
+  grid-column: span 11;
+}
+
+//@media all and (max-width: 800px) {
+//  .navigation {
+//  }
+//}
+//
+///* 小屏 */
+//@media all and (max-width: 500px) {
+//  .navigation {
+//  }
+//}

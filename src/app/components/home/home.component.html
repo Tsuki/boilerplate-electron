@@ -1,5 +1,14 @@
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+  <header>
+    <div>Home</div>
+    <div>Search</div>
+    <div class="flexPadLeft">Logout</div>
+  </header>
+  <aside>
+    <div class="item">input</div>
+    <div class="item">button</div>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>
